@@ -1,5 +1,5 @@
 require_relative 'config/environment'
-require_relative 'config/environment'
+# require_relative 'config/environment'
 
 class App < Sinatra::Base
 
@@ -14,15 +14,10 @@ class App < Sinatra::Base
   post '/puppy' do
     @puppy = Puppy.new(params[:name], params[:breed], params[:age])
     # @breed = Puppy.new()
+    # @name = Puppy.new(params [:name] [:breed][:age])
+    # @breed = Puppy.new(params [:breed])
     # @age = Puppy.new(params [:age])
     erb :display_puppy
       end
-
-  # post '/puppy/:name/:breed/:age' do
-  #   @name = Puppy.new(params [:name] [:breed][:age])
-  #   # @breed = Puppy.new(params [:breed])
-  #   # @age = Puppy.new(params [:age])
-  #   erb :display_puppy
-  #     end
 
 end
